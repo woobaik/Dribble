@@ -3,7 +3,7 @@
 
     <h1 class="title is-spaced">Sign Up</h1>
   
-<%= simple_form_for(resource, as: resource_name, url: new_user_registration_path(resource_name)) do |f| %>
+<%= simple_form_for(resource, as: resource_name, url: user_registration_path) do |f| %>
   <%= f.error_notification %>
 
   <div class="field">
@@ -46,7 +46,7 @@
   
   <div class="field is-grouped is-grouped-centered submit-button-group">
     <div class="control">
-      <%= f.button :submit, "Sign up", class:"button is-primary" %>
+      <%= f.button :submit, "Sign up", class:"button is-primary", method: :get %>
     </div>
     <div class="control">
       <%= link_to 'Back to Home', root_path , class:"button is-link"%>
