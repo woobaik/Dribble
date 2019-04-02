@@ -15,3 +15,16 @@
  */
 
  @import "bulma";
+
+ .custom-navbar {
+    box-shadow: 0 2px 2px -2px rgba(0,0,0,.2);
+    margin-bottom: 1rem;
+ }
+
+ .form-box {
+     margin-top: 10px;
+ }
+
+ .submit-button-group {
+     margin-top: 2rem;
+ }

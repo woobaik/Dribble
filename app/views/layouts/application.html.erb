@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="has-navbar-fixed-top">
   <head>
     <title>Dribble</title>
     <%= csrf_meta_tags %>
@@ -11,6 +11,7 @@
 
   <body>
     <%= render 'layouts/error' %>
+    <%= render 'layouts/navigation' %>
     <%= yield %>
   </body>
 </html>
