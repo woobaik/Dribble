@@ -2,7 +2,7 @@
   <div class="box form-box">
     <h1 class="title is-spaced">Log in</h1>
   
-      <%= simple_form_for(resource, as: resource_name, url: new_user_session_path(resource_name)) do |f| %>
+      <%= simple_form_for(resource, as: resource_name, url: user_session_path) do |f| %>
         <div class="field">
           <div class="control"> 
           <%= f.input :email,
