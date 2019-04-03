@@ -10,6 +10,8 @@
   <%= @shot.description %>
 </p>
 
+<%= image_tag "#{@shot.user_shot}" %>
+
 
 <%= link_to 'Edit', edit_shot_path(@shot) %> |
 <%= link_to 'Back', shots_path %>
