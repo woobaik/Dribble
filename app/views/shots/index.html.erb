@@ -1,10 +1,7 @@
-<h1>Shots</h1>
-
-
 <div class="container">
   <div class="box form-box">
 
-    <h1 class="title is-spaced">Sign Up</h1>
+    <h1 class="title is-spaced">Your Shot</h1>
   
 <%= simple_form_for(@shot) do |f| %>
   <%= f.error_notification %>
@@ -26,16 +23,16 @@
                 label_html: { class: 'label' },
                 required: true,
                 autofocus: true,
-                input_html: { autocomplete: "name", class:"input", placeholder:"Enter Name" }, wrapper: false%>
+                input_html: { autocomplete: "name", class:"input", placeholder:"Enter Title" }, wrapper: false%>
     </div>
   </div>  
   <div class="field">
     <div class="control"> 
-    <%= f.input :description,
+    <%= f.input :description, as: :text,
                 label: 'Description',
                 label_html: { class: 'label' },
                 required: true,
-                input_html: { autocomplete: "email", class:"input", placeholder:"Enter email" }, wrapper: false%>
+                input_html: { class:"textarea", placeholder:"Enter Description", rows: 7 }, wrapper: false%>
     </div>
   </div>    
   
