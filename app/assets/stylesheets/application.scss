@@ -13,9 +13,21 @@
  *= require_tree .
  *= require_self
  */
+ $pink: #ea3c89;
+ $pink-invert: #fff;
+
+ $primary: $pink;
+ $primary-invert: $pink-invert;
+ $link: $primary;
+ $link-hover: darken($primary, 20%);
+
 
  @import "bulma";
 
+ html, body {
+     min-height: 100vh;
+     background-color: #f4f4f4
+ }
  .custom-navbar {
     box-shadow: 0 2px 2px -2px rgba(0,0,0,.2);
     margin-bottom: 1rem;
@@ -27,4 +39,24 @@
 
  .submit-button-group {
      margin-top: 2rem;
+ }
+
+ .control > .error {
+     display: inline-block;
+     margin: 10px 0 0 10px;
+     padding: 0 50px;
+     box-shadow: 0 0 0 0.125em rgba(234, 60, 137, 0.25);
+     border: 3px solid $pink;
+     border-radius: 5px;
+ }
+
+ .error_notification {
+     border: 2px solid $pink;
+     box-shadow: 0 0 0 0.125em rgba(234, 60, 137, 0.25);
+     text-align: center;
+     margin-bottom: 30px;
+     padding: 10px 0;
+     font-size: 1.5rem;
+     border-radius: 5px;
+
  }

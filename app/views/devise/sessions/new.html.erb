@@ -3,6 +3,7 @@
     <h1 class="title is-spaced">Log in</h1>
   
       <%= simple_form_for(resource, as: resource_name, url: user_session_path) do |f| %>
+        <%= f.error_notification %>
         <div class="field">
           <div class="control"> 
           <%= f.input :email,
