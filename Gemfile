@@ -58,6 +58,7 @@ group :development do
   gem 'better_errors', '~> 2.5', '>= 2.5.1'
   gem 'guard', '~> 2.15'
   gem 'guard-livereload', '~> 2.5', require: false
+  gem 'dropzonejs-rails', '~> 0.8.4'
 end
 
 group :test do

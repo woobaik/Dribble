@@ -3,7 +3,7 @@
 
     <h1 class="title is-spaced">Your Shot</h1>
   
-<%= simple_form_for(@shot) do |f| %>
+<%= simple_form_for @shot, html: {class: "dropzone", id:"my-awesome-dropzone", multipart: true } do |f| %>
   <%= f.error_notification %>
 
   <div class="field">
@@ -24,21 +24,22 @@
                 required: true,
                 input_html: { class:"textarea", placeholder:"Enter Description", rows: 7 }, wrapper: false%>
     </div>
-  </div>    
+  </div> 
 
   <div class="field is-grouped is-grouped-centered">
     <div class="control"> 
-     <%= f.input :user_shot, as: :file,
+     <%= f.input :file, as: :file,
                   label: 'Upload your image file here',
                   label_html: { class: 'file-label custom-file-form' },
                   required: true,
-                  input_html: {class:"file-input", placeholder:"Drop your file", type: 'file' }, wrapper: false%>
+                  input_html: {name:"shot[user_shot]", class: "file-input", placeholder:"Drop your file", type: 'file' }, wrapper: false%>
     </div>
-  </div>  
+  </div>
+
   
   <div class="field is-grouped is-grouped-centered submit-button-group">
     <div class="control">
-      <%= f.button :submit, "ADD SHOT", class:"button is-primary", method: :get %>
+      <%= f.button :submit, "ADD SHOT", class:"button is-primary", id:"submit", method: :get %>
     </div>
 <% end %>
   </div>
