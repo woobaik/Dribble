@@ -26,16 +26,11 @@ class ShotsController < ApplicationController
   # POST /shots.json
   def create
     @shot = current_user.shots.build(shot_params)
-
-    respond_to do |format|
       if @shot.save
-        format.html { redirect_to @shot, notice: 'Shot was successfully created.' }
-        format.json { render :show, status: :created, location: @shot }
+        redirect_to @shot
       else
-        format.html { render :new }
-        format.json { render json: @shot.errors, status: :unprocessable_entity }
+        render :new
       end
-    end
   end
 
   # PATCH/PUT /shots/1

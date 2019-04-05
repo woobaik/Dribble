@@ -1,21 +1,6 @@
-Dropzone.options.myAwesomeDropzone = {
-    paramName: "shot[user_shot]"
-    
-};
-
-$('#submit').click(function () {
-    var myDropzone = Dropzone.forElement(".dropzone");
-    myDropzone.processQueue();
-});
-
-
-
 Dropzone.options.myAwesomeDropzone = { // The camelized version of the ID of the form element
-
-    autoDiscover: false,
+    paramName: "shot[user_shot]",
     autoProcessQueue: false,
-    uploadMultiple: true,
-    maxFiles: 3,
     init: function () {
 
         var myAwesomeDropzone = this;
@@ -26,8 +11,12 @@ Dropzone.options.myAwesomeDropzone = { // The camelized version of the ID of the
             // this will submit your form to the specified action path
             // after this, your whole form will get submitted with all the inputs + your files and the php code will remain as usual
             //REMEMBER you DON'T have to call ajax or anything by yourself, dropzone will take care of that
-        });
+            window.location.reload() 
+        }); 
 
     } // init end
+    
+
+
 
 };
