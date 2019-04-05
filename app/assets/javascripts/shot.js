@@ -1,4 +1,5 @@
-Dropzone.options.myAwesomeDropzone = { // The camelized version of the ID of the form element
+$(document).on('turbolinks:load', function () {
+    Dropzone.options.myAwesomeDropzone = { // The camelized version of the ID of the form element
     paramName: "shot[user_shot]",
     autoProcessQueue: false,
     init: function () {
@@ -19,4 +20,5 @@ Dropzone.options.myAwesomeDropzone = { // The camelized version of the ID of the
 
 
 
-};
+};    
+})
