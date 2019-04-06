@@ -1,7 +1,7 @@
 Welcome to Dribble colone
 
 <% if current_user %>
-    <%= link_to 'New Shot', shots_path %>
+    <%= link_to 'New Shot', shots_path, data: {  turbolinks: false } %>
 <% else %>
     <%= link_to 'Sign up', new_user_registration_path %>
     <%= link_to 'Log in',  new_user_session_path%>

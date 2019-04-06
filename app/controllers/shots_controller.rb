@@ -27,9 +27,9 @@ class ShotsController < ApplicationController
   def create
     @shot = current_user.shots.build(shot_params)
       if @shot.save
-        redirect_to @shot
+        render json: { message: 'success'}, status: 200
       else
-        render :new
+        render json: { error: @shot.errors.full_messages.join(',')}, :status => 400
       end
   end
 
