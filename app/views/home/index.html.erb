@@ -1,10 +1,24 @@
-Welcome to Dribble colone
+<div class="container">
+    <div class="box custom-box">
+        <h1 class="index-title is-size-2">Welcome to Dribble Clone Site.</h1>
+        <% if !current_user %>
+            <h3 class="custom-subtitle is-size-4">For demo, use Username:: <strong>guestuser@example.com</strong>  // Password:: <strong>guestuser</strong></h3>
+        <% else %>
+            <h3 class="custom-subtitle is-size-4">Try to add your <strong><%= link_to 'Dribble', new_shot_path, data: {  turbolinks: false }, class: "text-link" %></strong></h3>
+        <% end %>
 
-<% if current_user %>
-    <%= link_to 'New Shot', shots_path, data: {  turbolinks: false } %>
-<% else %>
-    <%= link_to 'Sign up', new_user_registration_path %>
-    <%= link_to 'Log in',  new_user_session_path%>
-<% end %>
 
-<button id="myBtn">home alone</button>
+    <% primary_btn = "button is-primary index-page-button" %>
+    <% if current_user %>
+        <%= link_to 'New Shot', new_shot_path, data: {  turbolinks: false }, class: primary_btn %>
+        <%= link_to 'Show Shot List', shots_path, data: {  turbolinks: false }, class: primary_btn %>
+    <% else %>
+        <%= link_to 'Sign up', new_user_registration_path, class: primary_btn %>
+        <%= link_to 'Log in',  new_user_session_path, class: primary_btn %>
+    <% end %>
+    </div>
+</div>
+
+
+
+

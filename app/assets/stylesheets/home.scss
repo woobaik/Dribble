@@ -1,3 +1,23 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.index-title {
+    display: inline-block;
+    border-bottom: 3px solid pink;
+    padding-bottom: 1rem;
+    margin-bottom: 3rem;
+}
+
+subtitle {
+    margin-top: 20px;   
+}
+
+.index-page-button {
+    margin: 1rem 0;
+}
+
+.text-link:hover {
+    color: #ea3c89;
+    background-color: white;
+}
