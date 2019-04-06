@@ -19,9 +19,10 @@ Dropzone.options.myAwesomeDropzone = {
             myDropzone.processQueue(); // Tell Dropzone to process all queued files.
             myDropzone.on("complete", function (file) {
                 myDropzone.removeFile(file);
-                window.location.href="localhost:3000/shots";
+                console.log("I get there1");
+                window.location.href="/shots";
+                return false;
             });
-        });
+        }); 
     }
-
-};
+};  

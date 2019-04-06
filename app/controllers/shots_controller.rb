@@ -5,7 +5,6 @@ class ShotsController < ApplicationController
   # GET /shots.json
   def index
     @shots = Shot.all
-    @shot = Shot.new
   end
 
   # GET /shots/1
@@ -27,6 +26,7 @@ class ShotsController < ApplicationController
   def create
     @shot = current_user.shots.build(shot_params)
       if @shot.save
+        redirect_to shots_path
         render json: { message: 'success'}, status: 200
       else
         render json: { error: @shot.errors.full_messages.join(',')}, :status => 400
