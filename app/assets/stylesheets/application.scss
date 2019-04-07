@@ -23,8 +23,10 @@
  $link: $primary;
  $link-hover: darken($primary, 20%);
 
-
+ 
  @import "bulma";
+ @import "font-awesome-sprockets";
+ @import "font-awesome";
  @import "dropzone/dropzone";
  
  html, body {
@@ -67,4 +69,14 @@
  .form-title {
      text-align: center;
      margin-top: 1rem;
+ }
+
+ .icon {
+     margin-left: 1rem;
+ }
+
+ .icon:hover {
+  color: black;
+  background-color: white;
+  margin-left: 1rem;  
  }

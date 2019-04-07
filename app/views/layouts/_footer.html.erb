@@ -1,9 +1,11 @@
 <footer class="footer">
-  <div class="content has-text-centered>
-    <%= "#{Time.now.year}" %> JOUNGWOO BAIK <i class="far fa-copyright"></i>ALL RIGHT RESERVED
-    <%= link_to 'https://github.com/woobaik' do %>
+  <div class="content has-text-centered">
+   <%= "#{Time.now.year}" %> JOUNGWOO BAIK <i class="far fa-copyright"></i>ALL RIGHT RESERVED
+  <%= link_to 'https://github.com/woobaik',class:"icon" do %>
       <i class="fab fa-github-square fa-2x mx-1 site-icons"></i>
     <% end %>
-    <%= link_to '<i class="fab fa-linkedin fa-2x mx-1 site-icons"></i>'.html_safe, 'https://www.linkedin.com/in/joungwoo-baik-1a3214143/'%>
+    <%= link_to  'https://www.linkedin.com/in/joungwoo-baik-1a3214143/', class:"icon" do %>
+      <i class="fab fa-linkedin fa-2x mx-1 site-icons"></i>
+    <% end %> 
   </div>
 </footer>
