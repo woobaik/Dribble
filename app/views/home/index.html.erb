@@ -1,11 +1,22 @@
 <div class="container">
     <div class="box custom-box">
-        <h1 class="index-title is-size-2">Welcome to Dribble Clone Site.</h1>
-        <% if !current_user %>
-            <h3 class="custom-subtitle is-size-4">For demo, use Username:: <strong>guestuser@example.com</strong>  // Password:: <strong>guestuser</strong></h3>
-        <% else %>
-            <h3 class="custom-subtitle is-size-4">Try to add your <strong><%= link_to 'Dribble', new_shot_path, data: {  turbolinks: false }, class: "text-link" %></strong></h3>
-        <% end %>
+        <h1 class="index-title is-size-2 is-uppercase has-text-weight-bold">
+            Welcome to Dribble Clone Site.<br>
+        </h1>
+        <div class="columns">
+            <h4 class="home-explanation is-size-5 column is-half" >
+                Dribble is the leading destination to find & showcase creative work and home to world best design professionals.
+            </h4>
+            <div class="column is-half image-box">
+                <%= image_tag 'home-image.gif' %>
+            </div>
+        </div>
+        
+    <% if !current_user %>
+        <h3 class="custom-subtitle is-size-4">For demo, use Username:: <strong>guestuser@example.com</strong>  // Password:: <strong>guestuser</strong></h3>
+    <% else %>
+        <h3 class="custom-subtitle is-size-4">Try to add your <strong><%= link_to 'Dribble', new_shot_path, data: {  turbolinks: false }, class: "text-link" %></strong></h3>
+    <% end %>
 
 
     <% primary_btn = "button is-primary index-page-button" %>
